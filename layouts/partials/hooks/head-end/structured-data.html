@@ -1,0 +1,58 @@
+{{/* Структурированные данные JSON-LD для SEO */}}
+{{ if site.Params.marketing.structured_data.enable }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.Params.marketing.structured_data.person.name }}",
+  "jobTitle": "{{ site.Params.marketing.structured_data.person.job_title }}",
+  "description": "{{ site.Params.marketing.seo.description }}",
+  "url": "{{ site.Params.marketing.structured_data.person.url }}",
+  "email": "{{ site.Params.marketing.structured_data.person.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "{{ site.Params.marketing.structured_data.person.location }}"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "{{ site.Params.marketing.structured_data.person.company }}"
+  },
+  "knowsAbout": {{ site.Params.marketing.structured_data.person.expertise | jsonify }},
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Высшая школа экономики",
+      "description": "Магистр экономических наук, специализация: Маркетинг и маркетинговые исследования"
+    },
+    {
+      "@type": "CollegeOrUniversity", 
+      "name": "МГУ им. М.В. Ломоносова",
+      "description": "Бакалавр экономических наук, факультет экономики"
+    }
+  ],
+  "hasOccupation": [
+    {
+      "@type": "Occupation",
+      "name": "Директор по маркетингу",
+      "occupationLocation": "Россия",
+      "estimatedSalary": {
+        "@type": "MonetaryAmountDistribution",
+        "currency": "RUB"
+      }
+    }
+  ],
+  "award": [
+    "Лучший проект года в номинации Маркетинг - KNIPEX Group 2023",
+    "Маркетолог года в B2B сфере - Российская Ассоциация Маркетинга 2019"
+  ],
+  "sameAs": [
+    "{{ with site.GetPage "/authors/admin" }}{{ range .Params.profiles }}{{ if eq .icon "brands/linkedin" }}{{ .url }}{{ end }}{{ end }}{{ end }}",
+    "{{ with site.GetPage "/authors/admin" }}{{ range .Params.profiles }}{{ if eq .icon "brands/telegram" }}{{ .url }}{{ end }}{{ end }}{{ end }}"
+  ],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.BaseURL }}"
+  }
+}
+</script>
+{{ end }}

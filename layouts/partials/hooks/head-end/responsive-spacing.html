@@ -1,0 +1,350 @@
+<style>
+  /* === RESPONSIVE SPACING AND LAYOUT OPTIMIZATION === */
+  
+  /* === ROOT VARIABLES FOR CONSISTENT SPACING === */
+  :root {
+    --mobile-spacing-xs: 0.5rem;
+    --mobile-spacing-sm: 1rem;
+    --mobile-spacing-md: 1.5rem;
+    --mobile-spacing-lg: 2rem;
+    --mobile-spacing-xl: 3rem;
+    
+    --tablet-spacing-xs: 0.75rem;
+    --tablet-spacing-sm: 1.25rem;
+    --tablet-spacing-md: 2rem;
+    --tablet-spacing-lg: 3rem;
+    --tablet-spacing-xl: 4rem;
+    
+    --desktop-spacing-xs: 1rem;
+    --desktop-spacing-sm: 1.5rem;
+    --desktop-spacing-md: 2.5rem;
+    --desktop-spacing-lg: 4rem;
+    --desktop-spacing-xl: 6rem;
+  }
+  
+  /* === MOBILE-FIRST SECTION SPACING === */
+  
+  /* Base mobile styles */
+  .hb-section {
+    padding: var(--mobile-spacing-xl) var(--mobile-spacing-sm);
+    margin-bottom: var(--mobile-spacing-lg);
+  }
+  
+  .hb-container {
+    max-width: 100%;
+    padding-left: var(--mobile-spacing-sm);
+    padding-right: var(--mobile-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* === HERO SECTION SPACING === */
+  .resume-biography {
+    padding: var(--mobile-spacing-xl) var(--mobile-spacing-sm) !important;
+    margin-bottom: var(--mobile-spacing-lg) !important;
+  }
+  
+  .resume-biography .hb-avatar {
+    margin-bottom: var(--mobile-spacing-md) !important;
+  }
+  
+  .resume-biography h1 {
+    margin-bottom: var(--mobile-spacing-sm) !important;
+  }
+  
+  .resume-biography .role {
+    margin-bottom: var(--mobile-spacing-md) !important;
+  }
+  
+  .resume-biography .biography-text {
+    margin-bottom: var(--mobile-spacing-lg) !important;
+  }
+  
+  /* === EXPERTISE SECTION SPACING === */
+  .expertise-section {
+    padding: var(--mobile-spacing-lg) var(--mobile-spacing-sm) !important;
+  }
+  
+  .expertise-section h1, 
+  .expertise-section h2 {
+    margin-bottom: var(--mobile-spacing-md) !important;
+  }
+  
+  .expertise-section h2 {
+    margin-top: var(--mobile-spacing-xl) !important;
+  }
+  
+  .expertise-section h2:first-of-type {
+    margin-top: 0 !important;
+  }
+  
+  .expertise-section p {
+    margin-bottom: var(--mobile-spacing-md) !important;
+  }
+  
+  .expertise-section strong {
+    margin-top: var(--mobile-spacing-sm) !important;
+    margin-bottom: var(--mobile-spacing-md) !important;
+    padding: var(--mobile-spacing-sm) var(--mobile-spacing-md) !important;
+  }
+  
+  /* === CASES SECTION SPACING === */
+  .cases-section {
+    padding: var(--mobile-spacing-lg) var(--mobile-spacing-sm) !important;
+  }
+  
+  .cases-section .hb-section-header {
+    margin-bottom: var(--mobile-spacing-lg) !important;
+  }
+  
+  .cases-section .collection-grid {
+    gap: var(--mobile-spacing-md) !important;
+  }
+  
+  .cases-section .collection-item {
+    padding: var(--mobile-spacing-md) !important;
+    margin-bottom: var(--mobile-spacing-sm) !important;
+  }
+  
+  .cases-section .collection-item h3 {
+    margin-bottom: var(--mobile-spacing-sm) !important;
+  }
+  
+  .cases-section .collection-item p {
+    margin-bottom: var(--mobile-spacing-sm) !important;
+  }
+  
+  /* === SERVICES SECTION SPACING === */
+  .services-section {
+    padding: var(--mobile-spacing-lg) var(--mobile-spacing-sm) !important;
+  }
+  
+  .services-section h2 {
+    margin-top: var(--mobile-spacing-lg) !important;
+    margin-bottom: var(--mobile-spacing-md) !important;
+  }
+  
+  .services-section h2:first-of-type {
+    margin-top: 0 !important;
+  }
+  
+  /* === BLOG SECTION SPACING === */
+  .blog-section {
+    padding: var(--mobile-spacing-lg) var(--mobile-spacing-sm) !important;
+  }
+  
+  .blog-section .hb-section-header {
+    margin-bottom: var(--mobile-spacing-lg) !important;
+  }
+  
+  .blog-section .collection-grid {
+    gap: var(--mobile-spacing-md) !important;
+  }
+  
+  /* === TABLET RESPONSIVE SPACING (768px - 1024px) === */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .hb-section {
+      padding: var(--tablet-spacing-xl) var(--tablet-spacing-md);
+      margin-bottom: var(--tablet-spacing-lg);
+    }
+    
+    .hb-container {
+      padding-left: var(--tablet-spacing-md);
+      padding-right: var(--tablet-spacing-md);
+      max-width: 90%;
+    }
+    
+    .resume-biography {
+      padding: var(--tablet-spacing-xl) var(--tablet-spacing-md) !important;
+    }
+    
+    .expertise-section,
+    .cases-section,
+    .services-section,
+    .blog-section {
+      padding: var(--tablet-spacing-lg) var(--tablet-spacing-md) !important;
+    }
+    
+    .cases-section .collection-grid,
+    .blog-section .collection-grid {
+      gap: var(--tablet-spacing-md) !important;
+    }
+    
+    .cases-section .collection-item {
+      padding: var(--tablet-spacing-md) !important;
+    }
+  }
+  
+  /* === DESKTOP RESPONSIVE SPACING (1024px+) === */
+  @media (min-width: 1024px) {
+    
+    .hb-section {
+      padding: var(--desktop-spacing-xl) var(--desktop-spacing-lg);
+      margin-bottom: var(--desktop-spacing-lg);
+    }
+    
+    .hb-container {
+      padding-left: var(--desktop-spacing-lg);
+      padding-right: var(--desktop-spacing-lg);
+      max-width: 1200px;
+    }
+    
+    .resume-biography {
+      padding: var(--desktop-spacing-xl) var(--desktop-spacing-lg) !important;
+    }
+    
+    .expertise-section,
+    .cases-section,
+    .services-section,
+    .blog-section {
+      padding: var(--desktop-spacing-lg) var(--desktop-spacing-lg) !important;
+    }
+    
+    .cases-section .collection-grid,
+    .blog-section .collection-grid {
+      gap: var(--desktop-spacing-md) !important;
+    }
+    
+    .cases-section .collection-item {
+      padding: var(--desktop-spacing-md) !important;
+    }
+    
+    .expertise-section h2 {
+      margin-top: var(--desktop-spacing-xl) !important;
+    }
+    
+    .services-section h2 {
+      margin-top: var(--desktop-spacing-xl) !important;
+    }
+  }
+  
+  /* === SMALL MOBILE ADJUSTMENTS (320px - 479px) === */
+  @media (max-width: 479px) {
+    
+    :root {
+      --mobile-spacing-xs: 0.25rem;
+      --mobile-spacing-sm: 0.75rem;
+      --mobile-spacing-md: 1rem;
+      --mobile-spacing-lg: 1.5rem;
+      --mobile-spacing-xl: 2rem;
+    }
+    
+    .hb-section {
+      padding: var(--mobile-spacing-lg) var(--mobile-spacing-xs);
+    }
+    
+    .hb-container {
+      padding-left: var(--mobile-spacing-xs);
+      padding-right: var(--mobile-spacing-xs);
+    }
+    
+    .resume-biography {
+      padding: var(--mobile-spacing-lg) var(--mobile-spacing-xs) !important;
+    }
+    
+    .expertise-section,
+    .cases-section,
+    .services-section,
+    .blog-section {
+      padding: var(--mobile-spacing-md) var(--mobile-spacing-xs) !important;
+    }
+  }
+  
+  /* === LARGE MOBILE ADJUSTMENTS (480px - 767px) === */
+  @media (min-width: 480px) and (max-width: 767px) {
+    
+    .hb-section {
+      padding: var(--mobile-spacing-xl) var(--mobile-spacing-sm);
+    }
+    
+    .cases-section .collection-item,
+    .blog-section .collection-item {
+      padding: var(--mobile-spacing-lg) !important;
+    }
+  }
+  
+  /* === VERTICAL RHYTHM OPTIMIZATION === */
+  
+  /* Consistent vertical spacing between all major sections */
+  .hb-section + .hb-section {
+    margin-top: 0;
+  }
+  
+  /* Remove double margins */
+  .hb-section:first-child {
+    margin-top: 0;
+  }
+  
+  .hb-section:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* === CONTENT FLOW IMPROVEMENTS === */
+  
+  /* Typography spacing */
+  h1 + p, h2 + p, h3 + p {
+    margin-top: 0;
+  }
+  
+  p + h2, p + h3 {
+    margin-top: var(--mobile-spacing-lg);
+  }
+  
+  /* List spacing */
+  ul, ol {
+    margin-bottom: var(--mobile-spacing-md);
+  }
+  
+  li + li {
+    margin-top: var(--mobile-spacing-xs);
+  }
+  
+  /* === ACCESSIBILITY IMPROVEMENTS === */
+  
+  /* Focus visible spacing */
+  *:focus-visible {
+    outline-offset: 2px;
+  }
+  
+  /* Skip to content link */
+  .skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: var(--mobile-spacing-sm);
+    background: #667eea;
+    color: white;
+    padding: var(--mobile-spacing-xs) var(--mobile-spacing-sm);
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+  }
+  
+  .skip-to-content:focus {
+    top: var(--mobile-spacing-xs);
+  }
+  
+  /* === PRINT STYLES === */
+  @media print {
+    .hb-section {
+      padding: 1rem 0;
+      margin-bottom: 1rem;
+    }
+    
+    .resume-biography,
+    .expertise-section,
+    .cases-section,
+    .services-section {
+      padding: 1rem 0 !important;
+      break-inside: avoid;
+    }
+    
+    .collection-item {
+      break-inside: avoid;
+      padding: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+  
+</style>

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is a Hugo-based website using the Academic CV theme from HugoBlox, designed as a portfolio site for Алена Ирошникова (Alena Iroshnikova), a marketer. The site uses Hugo modules system with HugoBlox components and is deployed on Netlify.
+This is a Hugo-based website using the Academic CV theme from HugoBlox, designed as a portfolio site for Алена Ирошникова (Alena Iroshnikova), a marketer. The site uses Hugo modules system with HugoBlox components and is deployed on GitHub Pages via GitHub Actions.
 
 ## Development Commands
 
@@ -48,16 +48,23 @@ This is a Hugo-based website using the Academic CV theme from HugoBlox, designed
 - SEO optimized with structured data
 - BibTeX citation support for publications
 - Image processing and optimization
-- Search functionality (Pagefind integration on Netlify)
+- Search functionality and image optimization
+- Mobile-first responsive design
+- SEO optimization with structured data
 
 ## Deployment
 
-### Netlify Configuration
-- Build command includes Hugo build + Pagefind indexing
-- Hugo version: 0.150.0
-- Node version: 22
-- Go version: 1.21.5
+### GitHub Pages via GitHub Actions
+- Workflow file: `.github/workflows/deploy.yml`
+- Auto-deployment on push to `main` branch
+- Hugo version: 0.150.0, Node version: 22, Go version: 1.21.5
 - Production builds use minification and garbage collection
+
+### Setup Instructions
+1. Enable GitHub Pages in repository Settings → Pages → Source → **GitHub Actions**
+2. Workflow will run automatically on push to `main`
+3. Site available at: `https://username.github.io/repository-name/`
+4. For custom domain: update `baseURL` in `config/_default/hugo.yaml`
 
 ### Environment Variables
 - `HUGO_ENV=production` for production builds
@@ -65,22 +72,23 @@ This is a Hugo-based website using the Academic CV theme from HugoBlox, designed
 
 ## Content Customization
 
-### Profile Setup for Alena Iroshnikova
-- Edit `content/authors/admin/_index.md` to update:
-  - Personal information (name, role, bio)
-  - Professional experience and education
-  - Social media links and contact information
-  - Skills and interests relevant to marketing
-- Replace `content/authors/admin/avatar.png` with Alena's photo
+### Profile Setup for Alena Iroshnikova ✅ COMPLETED
+- `content/authors/admin/_index.md` - Updated with Alena's information:
+  - Personal info: Алена Ирошникова, B2B marketing expert
+  - 18+ years experience with KNIPEX, Jungheinrich, Siemens
+  - Education: ВШЭ (Masters), МГУ (Bachelor)
+  - Social media: LinkedIn, Telegram, email
+  - Skills focused on B2B marketing, brand strategy, product launch
 
-### Site Configuration
-- Update `config/_default/hugo.yaml` title and baseURL
-- Modify `config/_default/params.yaml` for:
-  - Site branding (`header.navbar.logo.text`)
-  - SEO settings (`marketing.seo`)
-  - Color scheme (`appearance.color`)
+### Site Configuration ✅ COMPLETED
+- `config/_default/hugo.yaml` - Updated title for B2B marketer
+- `config/_default/params.yaml` - SEO optimized for Russian market
+- `config/_default/menus.yaml` - Russian navigation menu
+- Localization set to Russian as primary language
 
-### Content Organization
-- Blog posts use markdown with front matter
-- Projects support featured images and detailed descriptions
-- Publications support BibTeX citations and PDF attachments
+### Content Organization ✅ COMPLETED
+- `content/projects/` - 3 real marketing cases with ROI metrics
+- `content/_index.md` - Hero section with marketing expertise
+- `layouts/partials/hooks/head-end/` - Custom SEO and mobile optimizations
+- Removed demo content (publications, events, courses)
+- Blog posts kept for content marketing

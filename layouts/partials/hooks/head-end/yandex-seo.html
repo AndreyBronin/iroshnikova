@@ -1,0 +1,53 @@
+{{/* Дополнительные мета-теги для Yandex и русского рынка */}}
+
+{{/* Yandex геотаргетинг */}}
+<meta name="yandex-verification" content="">
+<meta name="geo.region" content="RU">
+<meta name="geo.placename" content="Россия">
+<meta name="DC.title" content="{{ .Title }} - {{ site.Title }}">
+
+{{/* Улучшенные Open Graph теги для социальных сетей */}}
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.marketing.seo.description }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+
+{{/* Twitter Card теги */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.marketing.seo.description }}{{ end }}">
+
+{{/* Дополнительные мета-теги для бизнес-профиля */}}
+<meta name="author" content="Алена Ирошникова">
+<meta name="business-type" content="Professional Services">
+<meta name="industry" content="B2B Marketing">
+<meta name="service-area" content="Россия">
+<meta name="expertise" content="промышленный маркетинг, B2B стратегия, запуск продуктов">
+
+{{/* Канонические ссылки */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Hreflang для мультиязычности (если будет добавлен английский) */}}
+<link rel="alternate" hreflang="ru" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+
+{{/* Дополнительные мета-теги для профессиональных страниц */}}
+{{ if eq .Type "authors" }}
+<meta name="profile:first_name" content="Алена">
+<meta name="profile:last_name" content="Ирошникова">
+<meta name="profile:username" content="alena-iroshnikova">
+{{ end }}
+
+{{/* Мета-теги для проектов/кейсов */}}
+{{ if eq .Type "projects" }}
+<meta name="article:author" content="Алена Ирошникова">
+<meta name="article:section" content="B2B Marketing Case Studies">
+<meta name="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ with .Params.tags }}
+  {{ range . }}
+<meta name="article:tag" content="{{ . }}">
+  {{ end }}
+{{ end }}
+{{ end }}

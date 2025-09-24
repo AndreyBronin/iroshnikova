@@ -1,0 +1,208 @@
+<!-- Mobile Viewport Optimization -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Алена Ирошникова">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#667eea">
+
+<!-- iOS Safari specific optimizations -->
+<meta name="apple-touch-fullscreen" content="yes">
+<link rel="apple-touch-icon" sizes="180x180" href="/media/icon_hu_982c5d63a71b2961.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/media/icon_hu_b7aec86dcb688f0.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/media/icon_hu_c545d605fbaba839.png">
+
+<!-- Preconnect to external domains for better performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- DNS prefetch for common external resources -->
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="//unpkg.com">
+
+<style>
+  /* === CRITICAL ABOVE-THE-FOLD STYLES === */
+  
+  /* Prevent FOUC (Flash of Unstyled Content) */
+  html {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  html.wf-active,
+  html.wf-inactive {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Critical loading styles */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #374151;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* iOS specific fixes */
+  * {
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -webkit-tap-highlight-color: rgba(102, 126, 234, 0.2);
+  }
+  
+  /* Prevent zoom on input focus in iOS */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Safe area insets for notched devices */
+  @supports (padding: max(0px)) {
+    .hb-section {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    
+    .hb-navbar {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+      padding-top: max(0.75rem, env(safe-area-inset-top));
+    }
+  }
+  
+  /* Performance optimizations */
+  img {
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+  }
+  
+  /* First image should not be lazy loaded */
+  .resume-biography img,
+  .hero img {
+    loading: eager;
+  }
+  
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    body {
+      background: #fff;
+      color: #000;
+    }
+  }
+  
+  /* Dark mode base styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #111827;
+      color: #f9fafb;
+    }
+  }
+  
+  /* Force hardware acceleration for smooth animations */
+  .resume-biography .biography-buttons .btn,
+  .collection-item,
+  .hb-navbar-collapse {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+</style>
+
+<script>
+  // Critical JavaScript for mobile optimization
+  (function() {
+    'use strict';
+    
+    // Detect touch device
+    function isTouchDevice() {
+      return (('ontouchstart' in window) ||
+              (navigator.maxTouchPoints > 0) ||
+              (navigator.msMaxTouchPoints > 0));
+    }
+    
+    // Add touch class to body
+    if (isTouchDevice()) {
+      document.documentElement.classList.add('touch-device');
+    } else {
+      document.documentElement.classList.add('no-touch');
+    }
+    
+    // Prevent iOS zoom on double tap
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+      const now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+    
+    // Optimize viewport height for mobile browsers
+    function setVH() {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    
+    setVH();
+    window.addEventListener('resize', setVH);
+    window.addEventListener('orientationchange', function() {
+      setTimeout(setVH, 100);
+    });
+    
+    // Optimize scroll performance
+    let ticking = false;
+    function updateScrollPosition() {
+      // Add scroll-based optimizations here
+      ticking = false;
+    }
+    
+    function requestScrollTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateScrollPosition);
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', requestScrollTick, { passive: true });
+    
+    // Font loading optimization
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load('400 1em -apple-system'),
+        document.fonts.load('600 1em -apple-system')
+      ]).then(function() {
+        document.documentElement.classList.add('fonts-loaded');
+      });
+    }
+    
+    // Show content after critical resources are loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      document.documentElement.style.visibility = 'visible';
+      document.documentElement.style.opacity = '1';
+    });
+    
+  })();
+</script>

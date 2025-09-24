@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+# Yandex specific crawlers
+User-agent: Yandex
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
+
+# Google crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Sitemap
+Sitemap: https://iroshnikova.com/sitemap.xml
+
+# Disallow admin and temporary files
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /*?*print=1
+Disallow: /*?*print=true
+
+# Allow all static assets
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /media/
+Allow: /uploads/

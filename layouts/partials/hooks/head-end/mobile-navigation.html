@@ -1,0 +1,401 @@
+<style>
+  /* === MOBILE NAVIGATION OPTIMIZATION === */
+  
+  /* Mobile-first navbar styling */
+  @media (max-width: 768px) {
+    
+    .hb-navbar {
+      padding: 0.75rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .hb-navbar-brand {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+    
+    /* Hamburger menu styling */
+    .hb-navbar-toggle {
+      padding: 0.5rem;
+      border: none;
+      background: none;
+      font-size: 1.25rem;
+      line-height: 1;
+      color: #374151;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .hb-navbar-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+    
+    .hb-navbar-toggle:focus {
+      outline: 2px solid #667eea;
+      outline-offset: 2px;
+    }
+    
+    /* Mobile menu dropdown */
+    .hb-navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(-10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .hb-navbar-collapse.show {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .hb-navbar-nav {
+      padding: 1rem 0;
+      list-style: none;
+      margin: 0;
+    }
+    
+    .hb-navbar-nav .nav-item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .hb-navbar-nav .nav-item:last-child {
+      border-bottom: none;
+    }
+    
+    .hb-navbar-nav .nav-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: #374151;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .hb-navbar-nav .nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transition: width 0.3s ease;
+    }
+    
+    .hb-navbar-nav .nav-link:hover,
+    .hb-navbar-nav .nav-link:focus {
+      background-color: rgba(102, 126, 234, 0.05);
+      color: #667eea;
+      padding-left: 2rem;
+    }
+    
+    .hb-navbar-nav .nav-link:hover::before,
+    .hb-navbar-nav .nav-link:focus::before {
+      width: 3px;
+    }
+    
+    .hb-navbar-nav .nav-link.active {
+      background-color: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      padding-left: 2rem;
+    }
+    
+    .hb-navbar-nav .nav-link.active::before {
+      width: 3px;
+    }
+    
+    /* Search input mobile optimization */
+    .hb-search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #f9fafb;
+      transition: all 0.3s ease;
+    }
+    
+    .hb-search-input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      background: white;
+    }
+    
+    /* Theme chooser mobile */
+    .hb-theme-chooser {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .hb-theme-chooser-button {
+      padding: 0.5rem 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      background: white;
+      color: #374151;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .hb-theme-chooser-button:hover {
+      border-color: #667eea;
+      color: #667eea;
+    }
+    
+    /* Body padding adjustment for fixed navbar */
+    body {
+      padding-top: 70px;
+    }
+    
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-padding-top: 80px;
+    }
+  }
+  
+  /* === TABLET NAVIGATION === */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .hb-navbar {
+      padding: 1rem 2rem;
+    }
+    
+    .hb-navbar-nav .nav-link {
+      padding: 0.75rem 1rem;
+      margin: 0 0.25rem;
+      border-radius: 6px;
+    }
+    
+    .hb-navbar-nav .nav-link:hover {
+      background-color: rgba(102, 126, 234, 0.1);
+    }
+  }
+  
+  /* === ACCESSIBILITY IMPROVEMENTS === */
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .hb-navbar {
+      background: white;
+      border-bottom: 2px solid #000;
+    }
+    
+    .hb-navbar-nav .nav-link {
+      color: #000;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .hb-navbar-nav .nav-link:hover,
+    .hb-navbar-nav .nav-link.active {
+      background: #000;
+      color: #fff;
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hb-navbar-collapse,
+    .hb-navbar-nav .nav-link,
+    .hb-navbar-nav .nav-link::before {
+      transition: none;
+    }
+  }
+  
+  /* === DARK MODE SUPPORT === */
+  [data-wc-theme="dark"] {
+    
+    .hb-navbar {
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .hb-navbar-brand {
+      color: #f9fafb;
+    }
+    
+    .hb-navbar-toggle {
+      color: #d1d5db;
+    }
+    
+    .hb-navbar-collapse {
+      background: #1f2937;
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .hb-navbar-nav .nav-item {
+      border-bottom-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .hb-navbar-nav .nav-link {
+      color: #d1d5db;
+    }
+    
+    .hb-navbar-nav .nav-link:hover,
+    .hb-navbar-nav .nav-link:focus {
+      background-color: rgba(102, 126, 234, 0.2);
+      color: #a5b4fc;
+    }
+    
+    .hb-navbar-nav .nav-link.active {
+      background-color: rgba(102, 126, 234, 0.3);
+      color: #a5b4fc;
+    }
+    
+    .hb-search-input {
+      background: #374151;
+      border-color: #4b5563;
+      color: #f9fafb;
+    }
+    
+    .hb-search-input:focus {
+      border-color: #667eea;
+      background: #4b5563;
+    }
+    
+    .hb-theme-chooser {
+      border-top-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .hb-theme-chooser-button {
+      background: #374151;
+      border-color: #4b5563;
+      color: #d1d5db;
+    }
+    
+    .hb-theme-chooser-button:hover {
+      border-color: #667eea;
+      color: #a5b4fc;
+    }
+  }
+  
+  /* === TOUCH DEVICE OPTIMIZATIONS === */
+  @media (hover: none) and (pointer: coarse) {
+    
+    .hb-navbar-nav .nav-link {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .hb-navbar-toggle {
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hb-theme-chooser-button {
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+    }
+  }
+  
+</style>
+
+<script>
+  // Mobile navigation functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggle = document.querySelector('.hb-navbar-toggle');
+    const navbarCollapse = document.querySelector('.hb-navbar-collapse');
+    const navLinks = document.querySelectorAll('.hb-navbar-nav .nav-link');
+    
+    // Toggle mobile menu
+    if (navbarToggle && navbarCollapse) {
+      navbarToggle.addEventListener('click', function() {
+        navbarCollapse.classList.toggle('show');
+        navbarToggle.setAttribute('aria-expanded', 
+          navbarCollapse.classList.contains('show'));
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!navbarToggle.contains(event.target) && 
+            !navbarCollapse.contains(event.target)) {
+          navbarCollapse.classList.remove('show');
+          navbarToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Close menu when clicking nav links
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          navbarCollapse.classList.remove('show');
+          navbarToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+    
+    // Smooth scrolling for anchor links
+    navLinks.forEach(function(link) {
+      if (link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    });
+    
+    // Active nav link highlighting
+    function updateActiveNavLink() {
+      const scrollPosition = window.scrollY + 100;
+      
+      navLinks.forEach(function(link) {
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            const elementTop = targetElement.offsetTop;
+            const elementBottom = elementTop + targetElement.offsetHeight;
+            
+            if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+              navLinks.forEach(l => l.classList.remove('active'));
+              link.classList.add('active');
+            }
+          }
+        }
+      });
+    }
+    
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveNavLink);
+    updateActiveNavLink(); // Initial call
+  });
+</script>
