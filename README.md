@@ -100,7 +100,7 @@ git clone https://github.com/HugoBlox/theme-academic-cv my-site
 cd my-site
 
 # 3. Run locally
-pnpm install && hugo server
+npm install && hugo server
 ```
 
 For more guides, visit our documentation at **https://docs.hugoblox.com/**.
