@@ -12,10 +12,10 @@ appearance:
 marketing:
   seo:
     site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    local_business_type: 'Professional Service Provider'
+    org_name: 'Алена Ирошникова - Консультант по маркетингу'
+    description: 'Алена Ирошникова - маркетолог B2B с 18+ летним опытом. Эксперт по промышленному маркетингу, стратегическому планированию и выводу продуктов на рынок. Консультант для технических компаний России.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -25,6 +25,17 @@ marketing:
   verification:
     google: ''
     baidu: ''
+    yandex: ''
+  structured_data:
+    enable: true
+    person:
+      name: 'Алена Ирошникова'
+      job_title: 'Маркетолог B2B, консультант по промышленному маркетингу'
+      company: 'Независимый консультант'
+      url: 'https://iroshnikova.com'
+      email: 'alena@iroshnikova.com'
+      location: 'Россия'
+      expertise: ['Маркетолог B2B', 'Промышленный маркетинг', 'Консультант по маркетингу', 'Стратегический маркетинг', 'Product Launch', 'Brand Strategy']
 
 # Site header
 header:
@@ -35,22 +46,19 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: 'Your Name'
+      text: 'Алена Ирошникова'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Алена Ирошникова. Все права защищены.'
     license:
-      enable: true
-      allow_derivatives: false
-      share_alike: true
-      allow_commercial: false
+      enable: false
 
 # Localization
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: '2 January 2006'
+  time_format: '15:04'
 
 # Site features
 features:

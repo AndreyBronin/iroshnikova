@@ -1,15 +1,37 @@
 ---
-title: scikit-learn
-date: 2023-10-26
-links:
-  - type: site
-    url: https://github.com/scikit-learn/scikit-learn
+title: 'Внедрение ABM для ключевых дилеров: Account-Based Marketing в B2B'
+summary: 'Account-Based Marketing (ABM) и B2B стратегия: повышение эффективности работы с ключевыми клиентами. Рост среднего чека на 25%, customer retention 89%'
+description: 'Кейс маркетолога B2B Алены Ирошниковой по внедрению Account-Based Marketing. Персонализированные стратегии для ключевых B2B клиентов, customer loyalty и retention'
+keywords: 'ABM, Account-Based Marketing, B2B маркетинг, ключевые клиенты, customer retention, B2B продажи, персонализация, лояльность клиентов, стратегический маркетинг'
+date: 2019-06-15
+featured: true
 tags:
-  - Hugo
-  - HugoBlox
-  - Markdown
+  - ABM
+  - Account-Based Marketing
+  - B2B Sales
+  - Customer Loyalty
+  - B2B Marketing
+  - Ключевые клиенты
+  - Стратегический маркетинг
 ---
 
-scikit-learn is a Python module for machine learning built on top of SciPy and is distributed under the 3-Clause BSD license.
+**Результат:** Рост среднего чека на 25%, повышение лояльности дилеров и увеличение repeat-sales на 35%.
 
 <!--more-->
+
+## Задача
+Повысить эффективность работы с ключевыми B2B-клиентами и дилерами, увеличить lifetime value и customer retention.
+
+## Действия
+- **Сегментация клиентов:** Выделение топ-50 аккаунтов по потенциалу и текущему объему
+- **Персонализированные стратегии:** Разработка индивидуальных планов развития для каждого ключевого дилера
+- **Кастомные инструменты:** Создание персональных маркетинговых материалов и промо-программ
+- **Dedicated support:** Назначение персональных менеджеров для топ-аккаунтов
+- **Аналитика и KPI:** Внедрение системы трекинга эффективности работы с каждым аккаунтом
+
+## Результат
+- Рост среднего чека на **25%** среди участников программы
+- Увеличение repeat-sales на **35%**
+- Customer retention rate вырос до **89%** (vs 72% до внедрения)
+- Снижение sales cycle на **20%** для ключевых аккаунтов
+- NPS ключевых партнеров: 8.7/10

@@ -1,86 +1,128 @@
 ---
-# Leave the homepage title empty to use the site title
-title: ''
+# SEO-оптимизированный title для главной страницы
+title: 'Маркетолог B2B | Консультант по промышленному маркетингу | Алена Ирошникова'
+description: 'Профессиональный маркетолог B2B с 18+ летним опытом. Эксперт по промышленному маркетингу, стратегическому планированию. Консультации для технических компаний. Опыт работы с KNIPEX, Jungheinrich, Siemens.'
+keywords: 'маркетолог B2B, промышленный маркетинг, консультант по маркетингу, стратегический маркетинг, маркетинг технических продуктов, B2B консультант, маркетинговая стратегия'
 date: 2022-10-24
 type: landing
 
 design:
-  # Default section spacing
-  spacing: '6rem'
+  # Default section spacing - optimized for mobile
+  spacing: '4rem'
+  # Mobile-first responsive spacing
+  spacing_mobile: '2rem'
 
 sections:
   - block: resume-biography-3
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      text: ''
-      # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      text: |
+        Помогаю промышленным и техническим компаниям увеличивать долю рынка и выручку через комплексную маркетинговую стратегию. Более 18 лет отвечаю за маркетинг международных брендов (KNIPEX, Jungheinrich, Siemens). 
+        
+        **Специализация:** построение продающей коммуникации бренда, вывод новых продуктов на рынок, запуск СТМ с нуля и построение love-брендов в B2B.
+      # Show call-to-action buttons under your biography
+      buttons:
+        - text: 📄 Скачать резюме
+          url: uploads/resume.pdf
+        - text: 💼 Обсудить проект
+          url: 'mailto:alena@iroshnikova.com?subject=Обсуждение проекта'
+        - text: 👋 Пригласить спикером
+          url: 'mailto:alena@iroshnikova.com?subject=Приглашение спикером'
       headings:
-        about: ''
-        education: ''
-        interests: ''
+        about: 'О себе'
+        education: 'Образование'
+        interests: 'Экспертиза'
     design:
       # Apply a gradient background
-      css_class: hbx-bg-gradient
-      # Avatar customization
+      css_class: hbx-bg-gradient resume-biography
+      # Avatar customization - responsive sizing
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        size: large # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+      # Mobile optimization
+      spacing:
+        padding: ['3rem', '2rem', '2rem', '2rem'] # top, right, bottom, left
+        margin: [0, 0, '2rem', 0]
   - block: markdown
+    id: expertise
     content:
-      title: '📚 My Research'
+      title: '💼 Моя экспертиза — это ваше конкурентное преимущество'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        ## Стратегический маркетинг и вывод продуктов
+        С нуля запускаю бренды и продукты на высококонкурентные рынки: от анализа ниши и разработки айдентики до построения дистрибуции и управления каналами сбыта. Мой опыт — это готовые схемы для быстрого и эффективного масштабирования.
+        
+        **Ключевые навыки:** Product Launch | Brand Strategy | Pricing Architecture | Go-To-Market Strategy
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        ## B2B и Промышленный маркетинг
+        Глубоко понимаю специфику продаж сложных технических продуктов и решений. Строю маркетинговые системы, которые работают на стыке отделов продаж, продукта и маркетинга, генерируя качественные лиды и повышая лояльность ключевых клиентов.
+        
+        **Ключевые навыки:** Community-driven marketing | ABM (Account-Based Marketing) | Trade Marketing | Lead Generation | Customer Loyalty
 
-        Please reach out to collaborate 😃
+        ## Управление командой и кросс-функциональное лидерство
+        Руковожу кросс-функциональными командами (in-house и outsource) более 12 лет. Выстраиваю процессы, которые обеспечивают слаженную работу маркетинга, продаж и продукта для достижения общих бизнес-целей.
+        
+        **Ключевые навыки:** Team Leadership | Budget Management | Project Management | Performance Marketing
     design:
       columns: '1'
+      css_class: 'markdown-block expertise-section'
+      spacing:
+        padding: ['2rem', '1rem', '2rem', '1rem']
   - block: collection
-    id: papers
+    id: cases
     content:
-      title: Featured Publications
+      title: Кейсы и измеримые результаты
+      text: Реализованные проекты с конкретными цифрами и достижениями
       filters:
         folders:
-          - publications
+          - projects
         featured_only: true
     design:
       view: article-grid
       columns: 2
-  - block: collection
+      css_class: 'collection-grid cases-section'
+      # Mobile-responsive columns
+      columns_mobile: 1
+      columns_tablet: 2
+      spacing:
+        padding: ['2rem', '1rem', '2rem', '1rem']
+        gap: '1.5rem'
+  - block: markdown
+    id: services
     content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    id: talks
-    content:
-      title: Recent & Upcoming Talks
-      filters:
-        folders:
-          - events
-    design:
-      view: card
-  - block: collection
-    id: news
-    content:
-      title: Recent News
+      title: 'Консультационная поддержка для вашего бизнеса'
       subtitle: ''
+      text: |-
+        ## 🎯 Interim-управление маркетингом
+        Возьму на себя руководство вашим маркетингом на период запуска продукта, кризиса или поиска постоянного кандидата. Полная ответственность за стратегию, бюджет и команду.
+        
+        **Формат:** Проект на 3-6 месяцев, полная занятость или частичная.
+
+        ## 📊 Стратегические сессии и аудит
+        Проведу комплексный аудит вашего текущего маркетинга, выявлю «узкие места» и разработаю пошаговый план по их устранению. Сфокусируемся на быстрых победах и долгосрочных целях.
+        
+        **Формат:** Разовый проект с итоговой презентацией и дорожной картой.
+
+        ## 🎓 Воркшопы и обучение
+        Тренинги для маркетинговых команд по стратегическому планированию, запуску продуктов и управлению брендом в B2B сфере.
+        
+        **Формат:** Корпоративные тренинги, онлайн-воркшопы, индивидуальное менторство.
+    design:
+      columns: '1'
+      css_class: 'markdown-block services-section'
+      spacing:
+        padding: ['2rem', '1rem', '2rem', '1rem']
+  - block: collection
+    id: blog
+    content:
+      title: Последние статьи
+      subtitle: 'Мысли о маркетинге, стратегии и индустриальных трендах'
       text: ''
       # Page type to display. E.g. post, talk, publication...
       page_type: blog
       # Choose how many pages you would like to display (0 = all pages)
-      count: 5
+      count: 3
       # Filter on criteria
       filters:
         author: ''
@@ -97,27 +139,12 @@ sections:
     design:
       # Choose a layout view
       view: card
-      # Reduce spacing
+      css_class: 'blog-section'
+      columns: 3
+      columns_mobile: 1
+      columns_tablet: 2
+      # Mobile-optimized spacing
       spacing:
-        padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
-    content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-    design:
-      card:
-        # Card background color (CSS class)
-        css_class: 'bg-primary-700'
-        css_style: ''
+        padding: ['2rem', '1rem', '2rem', '1rem']
+        gap: '1.5rem'
 ---

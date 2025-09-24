@@ -2,11 +2,21 @@
 #   Create a section for each of your site's languages.
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
-# Default language
+# Default language (Russian)
+ru:
+  languageCode: ru-ru
+  contentDir: content
+  title: 'Алена Ирошникова - Маркетолог B2B | Консультант по промышленному маркетингу'
+  params:
+    description: 'Профессиональный маркетолог B2B с 18+ летним опытом. Консультант по промышленному маркетингу и стратегическому планированию для технических компаний России.'
+
+# English version (optional)
 en:
   languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  contentDir: content/en
+  title: 'Alena Iroshnikova - B2B Marketer | Industrial Marketing Consultant'
+  params:
+    description: 'Professional B2B marketer with 18+ years of experience. Industrial marketing and strategic planning consultant for technical companies.'
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:
