@@ -2,7 +2,7 @@
 name: Deploy Hugo site to GitHub Pages
 
 on:
-  # Запуск при push в main ветку
+  # Запуск при push в dev ветку
   push:
     branches: [ dev ]
   
@@ -67,7 +67,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
       - name: Install Hugo modules
         run: hugo mod get -u
@@ -86,7 +86,7 @@ jobs:
                 --printPathWarnings
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
@@ -100,4 +100,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
