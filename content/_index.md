@@ -26,9 +26,9 @@ sections:
         - text: 📄 Скачать резюме
           url: uploads/resume.pdf
         - text: 💼 Обсудить проект
-          url: 'mailto:alena@iroshnikova.com?subject=Обсуждение проекта'
+          url: 'mailto:alena.iroshnikova@gmail.com?subject=Обсуждение проекта'
         - text: 👋 Пригласить спикером
-          url: 'mailto:alena@iroshnikova.com?subject=Приглашение спикером'
+          url: 'mailto:alena.iroshnikova@gmail.com?subject=Приглашение спикером'
       headings:
         about: 'О себе'
         education: 'Образование'

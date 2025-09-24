@@ -10,7 +10,7 @@
 <p align="center">
   <a href="#деплой-на-github-pages"><b>🚀 Автоматический деплой</b></a>
   &nbsp;•&nbsp;
-  <a href="mailto:alena@iroshnikova.com">📧 Связаться</a>
+  <a href="mailto:alena.iroshnikova@gmail.com">📧 Связаться</a>
   &nbsp;•&nbsp;
   <a href="https://linkedin.com/in/alena-iroshnikova"><b>💼 LinkedIn</b></a>
 </p>
@@ -97,9 +97,9 @@ npm run build
 
 ## Контакты
 
-- 📧 Email: [alena@iroshnikova.com](mailto:alena@iroshnikova.com)
+- 📧 Email: [alena.iroshnikova@gmail.com.com](mailto:alena.iroshnikova@gmail.com.com)
 - 💼 LinkedIn: [alena-iroshnikova](https://linkedin.com/in/alena-iroshnikova)
-- 📱 Telegram: [@alena_iroshnikova](https://t.me/alena_iroshnikova)
+- 📱 Telegram: [@alena_iroshnikova](https://t.me/airoshnikova)
 
 ---
 

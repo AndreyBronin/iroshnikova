@@ -13,7 +13,7 @@ first_name: Алена
 last_name: Ирошникова
 
 # Pronouns (optional)
-pronouns: она/её
+# pronouns: она/её
 
 # Status emoji
 status:
@@ -37,12 +37,12 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:alena@iroshnikova.com'
+    url: 'mailto:alena.iroshnikova@gmail.com.com'
     label: Написать письмо
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/alena-iroshnikova/
   - icon: brands/telegram
-    url: https://t.me/alena_iroshnikova
+    url: https://t.me/airoshnikova
 
 interests:
   - B2B Маркетинг
