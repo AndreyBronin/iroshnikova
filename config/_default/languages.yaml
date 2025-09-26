@@ -18,15 +18,3 @@ en:
   params:
     description: 'Professional B2B marketer with 18+ years of experience. Industrial marketing and strategic planning consultant for technical companies.'
 
-# Uncomment the lines below to configure your website in a second language.
-#zh:
-#  languageCode: zh-Hans
-#  contentDir: content/zh
-#  title: Chinese website title...
-#  params:
-#    description: Site description in Chinese...
-#  menu:
-#    main:
-#      - name: 传
-#        url: '#about'
-#        weight: 1

@@ -48,12 +48,15 @@ header:
     logo:
       text: 'Алена Ирошникова'
 
+
 # Site footer
 footer:
   copyright:
     notice: '© {year} Алена Ирошникова. Все права защищены.'
     license:
       enable: false
+  poweredby:
+    enable: false
 
 # Localization
 locale:

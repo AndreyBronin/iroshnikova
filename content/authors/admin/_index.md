@@ -6,7 +6,7 @@ description: 'Алена Ирошникова - маркетолог B2B с 18+ 
 keywords: 'Алена Ирошникова, маркетолог B2B, промышленный маркетинг, консультант по маркетингу, стратегический маркетинг, KNIPEX, Jungheinrich, Siemens'
 
 # Name pronunciation (optional)
-name_pronunciation: ''
+# name_pronunciation: ''
 
 # Full name (for SEO)
 first_name: Алена
@@ -16,8 +16,8 @@ last_name: Ирошникова
 # pronouns: она/её
 
 # Status emoji
-status:
-  icon: 💼
+#status:
+#  icon: 💼
 
 # Is this the primary user of the site?
 superuser: true
