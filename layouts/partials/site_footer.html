@@ -1,0 +1,9 @@
+<footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  {{- /* Copyright notice */ -}}
+  {{- with site.Params.footer.copyright.notice -}}
+    <p class="powered-by text-center">
+      {{- replace (replace . "{year}" now.Year) "{name}" site.Title -}}
+    </p>
+  {{- end -}}
+</footer>
