@@ -1,0 +1,1 @@
+Media kit placeholder. Replace with full press pack (photos, bio, topics, logos).
