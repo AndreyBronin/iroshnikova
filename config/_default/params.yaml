@@ -32,7 +32,7 @@ marketing:
       name: 'Алена Ирошникова'
       job_title: 'Маркетолог B2B, консультант по промышленному маркетингу'
       company: 'Независимый консультант'
-      url: 'https://iroshnikova.com'
+      url: 'https://airoshnikova.ru'
       email: 'alena.iroshnikova@gmail.com'
       location: 'Россия'
       expertise: ['Маркетолог B2B', 'Промышленный маркетинг', 'Консультант по маркетингу', 'Стратегический маркетинг', 'Product Launch', 'Brand Strategy']
@@ -43,7 +43,7 @@ header:
     enable: true
     block: 'navbar'
     fixed_to_top: true
-    show_search: true
+    show_search: false
     show_theme_chooser: true
     logo:
       text: 'Алена Ирошникова'

@@ -19,17 +19,7 @@ User-agent: Googlebot-Image
 Allow: /
 
 # Sitemap
-Sitemap: https://iroshnikova.com/sitemap.xml
+Sitemap: https://airoshnikova.ru/sitemap.xml
 
 # Disallow admin and temporary files
 Disallow: /admin/
-Disallow: /temp/
-Disallow: /*?*print=1
-Disallow: /*?*print=true
-
-# Allow all static assets
-Allow: /css/
-Allow: /js/
-Allow: /images/
-Allow: /media/
-Allow: /uploads/

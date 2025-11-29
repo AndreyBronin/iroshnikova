@@ -10,11 +10,3 @@ ru:
   params:
     description: 'Профессиональный маркетолог B2B с 18+ летним опытом. Консультант по промышленному маркетингу и стратегическому планированию для технических компаний России.'
 
-# English version (optional)
-en:
-  languageCode: en-us
-  contentDir: content/en
-  title: 'Alena Iroshnikova - B2B Marketer | Industrial Marketing Consultant'
-  params:
-    description: 'Professional B2B marketer with 18+ years of experience. Industrial marketing and strategic planning consultant for technical companies.'
-

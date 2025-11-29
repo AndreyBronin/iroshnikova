@@ -25,18 +25,15 @@ main:
   - name: Услуги
     url: /#services
     weight: 16
-  - name: Лид-магнит
-    url: /#lead-magnet
-    weight: 17
   - name: Блог
     url: /#blog
-    weight: 18
+    weight: 17
   - name: Награды
     url: /#recognition
-    weight: 19
+    weight: 18
   - name: Контакты
     url: /#contacts
-    weight: 20
+    weight: 19
   - name: Опыт
     url: experience/
     weight: 30

@@ -30,7 +30,6 @@ sections:
           url: uploads/media-kit.zip
       headings:
         about: 'О себе'
-        education: 'Образование'
         interests: 'Экспертиза'
     design:
       # Apply a gradient background
@@ -102,8 +101,6 @@ sections:
         **Jungheinrich (2009 – 2019) — Head of Marketing.** Разработка B2B-стратегии, вывод на рынок новых продуктов, масштабирование дилерской сети.
 
         **Siemens (2004 – 2009) — от ассистента до PR/Marketing specialist.** Старт карьеры в глобальной корпорации, фокус на коммуникациях и PR.
-
-        [Скачать CV в PDF →](uploads/resume.pdf)
     design:
       columns: '1'
       css_class: 'markdown-block timeline-section'
@@ -186,23 +183,6 @@ sections:
       css_class: 'markdown-block services-section'
       spacing:
         padding: ['2rem', '1rem', '2rem', '1rem']
-  - block: markdown
-    id: lead-magnet
-    content:
-      title: 'Лид-магнит для B2B-команд'
-      subtitle: 'Скачайте чек-лист и оцените готовность к росту'
-      text: |-
-        **Чек-лист:** «Готов ли ваш B2B-бренд к выходу в e-com»  
-        - 10 шагов подготовки: продукт, контент, дистрибуция, SLA с продажами, аналитика.  
-        - Типичные ошибки при участии в промышленных выставках и как их избегать.  
-        - Фреймворк быстрой оценки готовности команды и каналов.
-
-        [Получить чек-лист →](uploads/lead-magnet.pdf)
-    design:
-      columns: '1'
-      css_class: 'markdown-block lead-magnet-section'
-      spacing:
-        padding: ['2rem', '1rem', '2rem', '1rem']
   - block: collection
     id: blog
     content:
@@ -257,11 +237,10 @@ sections:
       title: 'Контакты'
       subtitle: 'Оперативно отвечаю на запросы по спикерству, консалтингу и совместным проектам'
       text: |-
-        **Телефон:** [+7 (926) 468 12 37](tel:+79264681237)  
         **Email:** [alena.iroshnikova@gmail.com](mailto:alena.iroshnikova@gmail.com)  
         **Telegram:** [@Alena_Sea_Inside](https://t.me/Alena_Sea_Inside)
 
-        **Соцсети:** [LinkedIn](https://linkedin.com/in/alena-iroshnikova) · [TenChat](https://tenchat.ru/) · [VC.ru](https://vc.ru/)
+        **Соцсети:** [LinkedIn](https://linkedin.com/in/alena-iroshnikova) · [VC.ru](https://vc.ru/id5429295)
 
         **Заявки:** [Пригласить спикером](mailto:alena.iroshnikova@gmail.com?subject=Приглашение%20спикером) · [Записаться на консультацию](mailto:alena.iroshnikova@gmail.com?subject=Запрос%20консультации)
     design:

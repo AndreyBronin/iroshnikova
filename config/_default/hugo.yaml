@@ -43,7 +43,7 @@ imaging:
   hint: picture
 timeout: 600000
 taxonomies:
-  author: authors
+#  author: authors
   tag: tags
   publication_type: publication_types
 markup:

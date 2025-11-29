@@ -101,6 +101,4 @@ npm run build
 - 💼 LinkedIn: [alena-iroshnikova](https://linkedin.com/in/alena-iroshnikova)
 - 📱 Telegram: [@alena_iroshnikova](https://t.me/airoshnikova)
 
----
 
-© 2025 Алена Ирошникова. Все права защищены.
